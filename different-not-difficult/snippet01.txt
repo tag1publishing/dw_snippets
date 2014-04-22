@@ -1,0 +1,19 @@
+/**
+ * Implements EventSubscriberInterface::getSubscribedEvents().
+ */
+static function getSubscribedEvents() {
+  // Register before and after listeners for the primary kernel events.
+  $events[KernelEvents::REQUEST][] = array('beforeRequest', 255);
+  $events[KernelEvents::REQUEST][] = array('afterRequest', -255);
+  $events[KernelEvents::VIEW][] = array('beforeView', 255);
+  $events[KernelEvents::VIEW][] = array('afterView', -255);
+  $events[KernelEvents::CONTROLLER][] = array('beforeController', 255);
+  $events[KernelEvents::CONTROLLER][] = array('afterController', -255);
+  $events[KernelEvents::RESPONSE][] = array('beforeResponse', 255);
+  $events[KernelEvents::RESPONSE][] = array('afterResponse', -255);
+  $events[KernelEvents::TERMINATE][] = array('beforeTerminate', 255);
+  $events[KernelEvents::TERMINATE][] = array('afterTerminate', -255);
+  // Exceptions are handled differently.
+  $events[KernelEvents::EXCEPTION][] = array('onException', -255);
+  return $events;
+}

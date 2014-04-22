@@ -1,0 +1,50 @@
+/**
+ * Parse a Symfony controller into a TraceView-reportable format.
+ */
+public function parseController($request, $controller) {
+  $parsed = array('Controller' => NULL, 'Action' => NULL);
+
+  // We use the same logic as the Symfony debug toolbar to parse out controller/action.
+  if (is_array($controller)) {
+    $parsed['Controller'] = $controller[0];
+    $parsed['Action'] = $controller[1];
+  } elseif ($controller instanceof \Closure) {
+    $r = new \ReflectionFunction($controller);
+    $parsed['Controller'] = $r->getName();
+    $parsed['Action'] = NULL;
+  } elseif (is_string($controller)) {
+    // Controller::action strings
+    if (strpos($controller, '::') !== FALSE) {
+    $ca = explode("::", $controller);
+    $parsed['Controller'] = $ca[0];
+    $parsed['Action'] = $ca[1];
+    // Any other string
+  } else {
+    $parsed['Controller'] = $controller;
+  }
+
+  // Proxy controller for a full HTML page. Re-parse the underlying controller.
+  if (is_a($parsed['Controller'], 'Drupal\Core\Controller\HtmlPageController')) {
+    return $this->parseController($request, $request->attributes->get("_content"));
+  }
+
+  // Proxy controller for an HTML form. Use the matching form
+  // (e.g., 'Drupal\system\Form\ModulesListForm') as the action.
+  if (is_a($parsed['Controller'], 'Drupal\Core\Controller\HtmlFormController')) {
+    $parsed['Action'] = $request->attributes->get("_form");
+  }
+
+  // Proxy class for an HTML entity form. Use the matching entity form
+  // (e.g., 'node.edit') as the action.
+  if (is_a($parsed['Controller'], 'Drupal\Core\Entity\HtmlEntityFormController')) {
+    $parsed['Action'] = $request->attributes->get("_entity_form");
+  }
+ 
+  // Proxy class for a View. Use the matching View ID and display ID.
+  if ($parsed['Controller'] === 'Drupal\views\Routing\ViewPageController') {
+    $parsed['Controller'] = 'ViewPageController::'.$request->attributes->get('view_id');
+    $parsed['Action'] = $request->attributes->get('display_id');
+  }
+
+  return $parsed;
+}
