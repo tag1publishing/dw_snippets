@@ -1,0 +1,14 @@
+id: submission-form
+label: Registration page
+langcode: en
+routes:
+  - route_name: user.register
+tips:
+  first-name:
+    id: field-first-name
+    plugin: text
+    label: "First name"
+    body: "This is where you enter your first name."
+    weight: "1"
+    attributes:
+      data-id: field-first-name

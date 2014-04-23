@@ -1,0 +1,15 @@
+id: demo-youtube
+module: 'tour_youtube'
+label: 'Demo some youtube'
+langcode: en
+routes:
+  - route_name: node.content_overview
+tips:
+  demo-video:
+    id: demo-video
+    plugin: youtube
+    label: 'Group Photo Time Lapse'
+    weight: 3
+    youtube_id: '8tHvys7xTRM'
+    attributes:
+      data-id: 'view-changed-table-column'
