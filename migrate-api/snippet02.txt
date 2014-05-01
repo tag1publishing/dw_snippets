@@ -1,0 +1,5 @@
+process:
+  body.format:
+    plugin: migration
+    migration: d6_filter_format
+    source: format
