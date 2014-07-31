@@ -1,0 +1,27 @@
+<node>
+  <body>
+    <value>
+      <p>Body text</p>
+    </value>
+    <summary/>
+    <format>full_html</format>
+  </body>
+  <nid>1</nid>
+  <vid>1</vid>
+  <is_new/>
+  <type>page</type>
+  <title>Page Title</title>
+  <language>und</language>
+  <url>http://drupal_7_test/node/1</url>
+  <edit_url>http://drupal_7_test/node/1/edit</edit_url>
+  <status>1</status>
+  <promote>0</promote>
+  <sticky>0</sticky>
+  <created>1402821494</created>
+  <changed>1403394617</changed>
+  <log/>
+  <comment>1</comment>
+  <comments/>
+  <comment_count>0</comment_count>
+  <comment_count_new>0</comment_count_new>
+</node>

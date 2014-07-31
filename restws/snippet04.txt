@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uri resource="node" id="2">http://drupal_7_test/node/2</uri>

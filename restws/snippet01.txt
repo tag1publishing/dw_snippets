@@ -1,0 +1,26 @@
+{
+  "body": {
+    "value":"\u003Cp\u003EBody text.\u003C\/p\u003E\n",
+    "summary":"",
+    "format":"full_html"
+  },
+  "nid":"1",
+  "vid":"1",
+  "is_new":false,
+  "type":"page",
+  "title":"Page Title",
+  "language":"und",
+  "url":"http:\/\/drupal_7_test\/node\/1",
+  "edit_url":"http:\/\/drupal_7_test\/node\/1\/edit",
+  "status":"1",
+  "promote":"0",
+  "sticky":"0",
+  "created":"1402821494",
+  "changed":"1403394617",
+  "log":"",
+  "revision":null,
+  "comment":"1",
+  "comments":[],
+  "comment_count":"0",
+  "comment_count_new":"0"
+}

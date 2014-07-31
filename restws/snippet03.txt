@@ -1,0 +1,9 @@
+<node>
+  <type>page</type>
+  <title>New Page Title</title>
+  <body>
+    <value>
+      <p>New body text</p>
+    </value>
+  </body>
+</node>

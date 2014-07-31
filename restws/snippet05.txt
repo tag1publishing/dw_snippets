@@ -1,0 +1,8 @@
+<node>
+  <title>Modified Page Title</title>
+  <body>
+    <value>
+      <p>Modified body text</p>
+    </value>
+  </body>
+</node>
