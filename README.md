@@ -1,4 +1,4 @@
-This repository hold code snippets from the Drupal Watchdog print
+This repository holds code snippets from the Drupal Watchdog print
 magazine. Code snippets from each issue live in their own branch.
 
 * dw4.01: Drupal Watchdog Summer 2014, "Drupal 8"
