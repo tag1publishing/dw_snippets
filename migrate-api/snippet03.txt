@@ -1,3 +1,0 @@
-process:
-  nid: nid
-  langcode: language
