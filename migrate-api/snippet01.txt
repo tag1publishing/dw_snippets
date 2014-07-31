@@ -1,9 +1,0 @@
-process:
-  vid:
-    -
-    plugin: machine_name
-    source: name
-    -
-    plugin: dedupe_entity
-    entity_type: taxonomy_vocabulary
-    field: vid

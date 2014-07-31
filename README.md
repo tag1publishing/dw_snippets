@@ -1,4 +1,5 @@
-dw4.01
+dw4.02
 ======
 
-Code snippets from Drupal Watchdog Summer 2014 issue.
+Code snippets from Drupal Watchdog Winter 2014 issue:
+"Drupal As A Services Platform".
