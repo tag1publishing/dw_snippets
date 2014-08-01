@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file oauthRequest.php
+ * Performs an OAuth request to retrieve a node.
+ */
+require 'vendor/autoload.php';
+use Guzzle\Http\Client;
+$client = new Client('http://d8.local');
+$client->addSubscriber(new Guzzle\Plugin\Oauth\OauthPlugin(array(
+  'consumer_key'  => '3Pm5qMsEPLZavxEDLaMhFWKBEdV525MM',
+  'consumer_secret' => 'mRQy4FEKbHetqHeFUHm3yBC7YqwEKpgs',
+)));
+$request = $client->get('node/1', array(
+    'Accept' => 'application/json',
+  ),
+  array('debug' => TRUE));
+try {
+  $response = $request->send()->json();
+  print_r($response);
+}
+catch (\Exception $e) {
+  print_r($e->getMessage());
+}
+?>

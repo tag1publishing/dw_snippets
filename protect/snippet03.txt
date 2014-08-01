@@ -1,0 +1,9 @@
+# File: mymodule.routing.yml
+mymodule.secret_data:
+  path: '/secret_data'
+  options:
+    _auth: [ 'basic_auth', 'oauth' ]
+  requirements:
+    _user_is_logged_in: 'TRUE'
+  defaults:
+    _content: '\Drupal\mymodule\MyModuleController::secretData'
