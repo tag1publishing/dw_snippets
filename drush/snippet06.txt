@@ -1,0 +1,4 @@
+libraries[FooTable][download][type] = ""
+libraries[FooTable][download][url] = ""
+libraries[FooTable][directory_name] = "FooTable"
+libraries[FooTable][type] = "library"

@@ -1,0 +1,5 @@
+<?php
+$aliases['store'] = array(
+  'root' => '/path/to/drupal',
+  'uri' => 'store.example.com',
+);

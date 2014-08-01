@@ -1,0 +1,2 @@
+libraries[FooTable][download][type] = "git"
+libraries[FooTable][download][url] = "https://github.com/bradvin/FooTable.git"

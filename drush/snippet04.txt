@@ -1,0 +1,2 @@
+$options['shell-aliases']['enabled'] = 'pm-list --no-core --status=enabled';
+$options['shell-aliases']['add'] = '!git add .';

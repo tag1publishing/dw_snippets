@@ -1,0 +1,1 @@
+drush @store make-generate mystore.make
