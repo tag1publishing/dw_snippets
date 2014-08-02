@@ -1,0 +1,3 @@
+  <script src="https://raw.githubusercontent.com/CameronAskew/jquery.mobile.paramsHandler/master/src/jquery.mobile.paramsHandler-1.4.2.js"></script>
+  <!-- Custom JS goes here. -->
+  <script src="app.js"></script>

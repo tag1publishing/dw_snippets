@@ -1,0 +1,1 @@
+/Applications/BlueStacks.app/Contents/Runtime/uHD-Adb install -r D8WebServicesDemo-debug.apk

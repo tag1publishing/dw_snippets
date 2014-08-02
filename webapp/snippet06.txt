@@ -1,0 +1,8 @@
+resources:
+  'entity:node':
+    GET:
+      supported_formats:
+        - hal_json
+      supported_auth:
+        - basic_auth
+# (Repeat above for POST, PATCH, DELETE.)
