@@ -1,0 +1,10 @@
+bootstrap-corescripts:
+  version: VERSION
+  js:
+    js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
