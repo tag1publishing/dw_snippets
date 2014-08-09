@@ -1,0 +1,6 @@
+<html>
+  <title>It's Jamal's Birthday!</title>
+  <body>
+    <p>Happy birthday, <a href="http://example.com/people/jamal">Jamal!</a>
+  </body>
+</html>
